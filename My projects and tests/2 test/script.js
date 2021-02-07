@@ -1,16 +1,21 @@
 "use strict"
-let personalMovieDB = {
-    count  : prompt("Сколько фильмов вы уже посмотрели?",9),
-    movies : {},
-    actors : {},
-    genret : [],
-    privat : confirm("Будет ли приватен ли ваш аккаунт?")
-};
-let a = prompt("Один из последних просмотренных фильмов?"),
-    b = prompt("На сколько оцените его?"),
-    c = prompt("Один из последних просмотренных фильмов?"),
-    d = prompt("На сколько оцените его?");
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB.movies)
+function calculate(a, b, y) {
+    switch (y) {
+        case "+":
+            console.log(a+b);
+            break;
+        case "-":
+            console.log(a-b);
+            break
+        case "*":
+            console.log(a*b);
+            break
+        case "/":
+            console.log(a/b);
+            break
+        default:
+            alert("error")
+    
+    }
+}
+calculate(+prompt("Введите 1 число", 9), +prompt("Введите 2 число", 10), prompt("Введите действие: +, -, *, /.","/"))
