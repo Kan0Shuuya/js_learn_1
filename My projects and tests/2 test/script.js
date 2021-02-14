@@ -1,21 +1,21 @@
 "use strict"
-function calculate(a, b, y) {
+function cal(a, b, y) {
     switch (y) {
         case "+":
-            console.log(a+b);
+            return a+b;
             break;
         case "-":
-            console.log(a-b);
+            return a-b;
             break
         case "*":
-            console.log(a*b);
+            return a*b;
             break
         case "/":
-            console.log(a/b);
+            return a/b;
             break
         default:
             alert("error")
     
     }
 }
-calculate(+prompt("Введите 1 число", 9), +prompt("Введите 2 число", 10), prompt("Введите действие: +, -, *, /.","/"))
+console.log(cal(9,8,"+"))
