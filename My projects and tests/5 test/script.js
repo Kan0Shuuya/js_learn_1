@@ -1,16 +1,8 @@
 "use strict"
-let personalMovieDB = {
-    count  : prompt("Сколько фильмов вы уже посмотрели?",9),
-    movies : {},
-    actors : {},
-    genret : [],
-    privat : confirm("Будет ли приватен ли ваш аккаунт?")
-};
-let a = prompt("Один из последних просмотренных фильмов?"),
-    b = prompt("На сколько оцените его?"),
-    c = prompt("Один из последних просмотренных фильмов?"),
-    d = prompt("На сколько оцените его?");
+let sd = [];
+let i = 3;
+for (let x = 0; x != i; x++) {
+    sd[x] = prompt("Что добавить?")
+    console.log(sd)
+}
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB.movies)
