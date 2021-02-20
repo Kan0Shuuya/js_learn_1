@@ -1,14 +1,15 @@
 "use strict"
-var i = +prompt("Сколько фильмов вы смотрели?");
+var i = +prompt("Сколько фильмов вы смотрели?"),
+    x = 0;
 
-let personalMovieDB = {
+var personalMovieDB = {
         count  : i,
         movies : {},
         actors : {},
         genret : [],
         privat : confirm("Будет ли приватен ли ваш аккаунт?")
 };
-for (let x; i !== x; x++) {
+for (; i !== x; x++) {
         let a = prompt(`Введите название одного из просмотренных вами, фильмов, который вы, можете оценить`),
             b = prompt("На сколько вы его оценили бы?");
         
@@ -20,18 +21,17 @@ for (let x; i !== x; x++) {
             x--;
         }
     };
-function writeYourGenres(i) {
-    for (let x, y; i != x; x++, y++) {
-        personalMovieDB.genret = (`Назовите жанры фильма ${personalMovieDB.movies[y-1]}`)
-            
-    }
+
+function showMyDB(xz) {
+    console.log(personalMovieDB.privat == false ? personalMovieDB : "eror 404")    
 };
 
-
-
-function showMyDB(x) {
-    console.log( x == false ? personalMovieDB : "Отказоно в доступе")
+function writeYourGenres(){
+    for (let countGenres = +prompt("Сколько у вас любимых жанров?"), x = 0; countGenres != x; x++) {
+        personalMovieDB.genret[x]=prompt(`Введите жанр под номером ${x+1}`)
+        
+    }    
 }
 
-
-    showMyDB(personalMovieDB.privat)
+writeYourGenres();
+showMyDB(personalMovieDB)
