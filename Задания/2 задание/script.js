@@ -2,7 +2,7 @@
 var i = +prompt("Сколько фильмов вы смотрели?"),
     x = 0;
 
-let personalMovieDB = {
+var personalMovieDB = {
         count  : i,
         movies : {},
         actors : {},
@@ -21,4 +21,3 @@ for (; i !== x; x++) {
             x--;
         }
     };
-console.log(personalMovieDB)

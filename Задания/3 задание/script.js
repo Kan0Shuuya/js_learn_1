@@ -2,7 +2,7 @@
 var i = +prompt("Сколько фильмов вы смотрели?"),
     x = 0;
 
-let personalMovieDB = {
+var personalMovieDB = {
         count  : i,
         movies : {},
         actors : {},
@@ -20,5 +20,18 @@ for (; i !== x; x++) {
             console.log("error");
             x--;
         }
-    }
-console.log(personalMovieDB);
+}
+
+function showMyDB(xz) {
+    console.log(personalMovieDB.privat == false ? personalMovieDB : "eror 404")    
+};
+
+function writeYourGenres(){
+    for (let countGenres = +prompt("Сколько у вас любимых жанров?"), x = 0; countGenres != x; x++) {
+        personalMovieDB.genret[x]=prompt(`Введите жанр под номером ${x+1}`)
+        
+    }    
+}
+
+writeYourGenres();
+showMyDB(personalMovieDB)
