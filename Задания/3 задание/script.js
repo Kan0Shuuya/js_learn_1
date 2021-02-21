@@ -24,7 +24,7 @@ for (; i !== x; x++) {
 
 function showMyDB(xz) {
     console.log(personalMovieDB.privat == false ? personalMovieDB : "eror 404")    
-};
+}
 
 function writeYourGenres(){
     for (let countGenres = +prompt("Сколько у вас любимых жанров?"), x = 0; countGenres != x; x++) {
