@@ -1,4 +1,9 @@
 "use strict";
-(function (x,y) {
-    console.log(x+y)
-}(1,2))
+let arr = {
+    x : "aga",
+    y : 7,
+    z : true
+};
+arr.forEach(){
+    console.log(arr)
+}
