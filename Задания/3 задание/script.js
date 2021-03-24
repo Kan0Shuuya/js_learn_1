@@ -1,6 +1,7 @@
 "use strict"
 var i = +prompt("Сколько фильмов вы смотрели?"),
-    x = 0;
+    x = 0,
+    assignedRank;
 
 var personalMovieDB = {
         count  : i,
@@ -31,6 +32,13 @@ function writeYourGenres(){
         personalMovieDB.genret[x]=prompt(`Введите жанр под номером ${x+1}`)
         
     }    
+}
+
+function checkRank(count){
+    if (count < 10){assignedRank = "Просмотрено довольно мало фильмов"}
+    if (10 < count < 50){ assignedRank = "Вы классический зритель"}
+    if (count > 50){ assignedRank = "Вы киноман"}
+    console.log(assignedRank)
 }
 
 writeYourGenres();
