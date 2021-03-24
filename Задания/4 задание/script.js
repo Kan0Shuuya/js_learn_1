@@ -43,7 +43,7 @@ var personalMovieDB = {
             let i;
             for(const temp of personalMovieDB.genret){
                 i++;
-                console.log(`Любимый жанр #${temp} - это ${temp}`)
+                console.log(`Любимый жанр #${temp} - это ${i}`)
             }
         },
         checkRank : function(counts){
