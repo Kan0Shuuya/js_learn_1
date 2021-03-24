@@ -34,7 +34,6 @@ var personalMovieDB = {
                 i = prompt(`Введите жанр под номером ${x+1}`)
                 if (i == null || "" || NaN){
                     --x;
-                    alert("Пишов нахуй "+ x)
                 }
                 else{personalMovieDB.genret[x]=i}
             }
