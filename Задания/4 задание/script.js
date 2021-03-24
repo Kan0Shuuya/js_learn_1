@@ -30,21 +30,36 @@ var personalMovieDB = {
         },
         
         writeYourGenres : function (){
-            for (x = 0; personalMovieDB.countGenres != x; x++) {
-                personalMovieDB.genret[x]=prompt(`Введите жанр под номером ${x+1}`)
-                
-            }    
+            for (let x = 0, i = 0; personalMovieDB.countGenres != x; x++) {    
+                i = prompt(`Введите жанр под номером ${x+1}`)
+                if (i == null || "" || NaN){
+                    --x;
+                    alert("Пишов нахуй "+ x)
+                }
+                else{personalMovieDB.genret[x]=i}
+            }
         },
-        
-        checkRank : function(count){
-            if (count < 10){assignedRank = "Просмотрено довольно мало фильмов"}
-            if (10 < count < 50){assignedRank = "Вы классический зритель"}
-            if (count > 50){assignedRank = "Вы киноман"}
+        returnYourGenres: function(){
+            let i;
+            for(const temp of personalMovieDB.genret){
+                i++;
+                console.log(`Любимый жанр #${temp} - это ${temp}`)
+            }
+        },
+        checkRank : function(counts){
+            if (counts < 10){assignedRank = "Просмотрено довольно мало фильмов"}
+            if (10 < counts < 50){assignedRank = "Вы классический зритель"}
+            if (counts > 50){assignedRank = "Вы киноман"}
             return(assignedRank)
+        },
+
+        reverseVisibleMyDB : function() {
+                personalMovieDB.privat = !personalMovieDB.privat
         }
 };
 
 personalMovieDB.start()
 console.log(personalMovieDB.ReturnDB())
 personalMovieDB.writeYourGenres()
-console.log(personalMovieDB.checkRank())
+console.log(personalMovieDB.checkRank(personalMovieDB.countFilms))
+console.log(personalMovieDB.returnYourGenres())
